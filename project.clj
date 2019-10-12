@@ -9,5 +9,5 @@
                  [http-kit "2.3.0"]
                  [com.stuartsierra/component "0.4.0"]]
   :profiles {:dev {:plugins []
-                   :dependencies []
+                   :dependencies [[reloaded.repl "0.1.0"]]
                    :sourse-paths ["dev"]}})
