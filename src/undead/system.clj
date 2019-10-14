@@ -10,7 +10,7 @@
 
 (defn- stop-server [server]
   (when server
-    (server)))
+    (server))) ;; run-server returns a fn that stops itself
 
 (defrecord ParensOfTheDead []
   component/Lifecycle
@@ -18,7 +18,7 @@
     (assoc this :server (start-server #'app 9009)))
   (stop [this]
     (stop-server (:server this))
-    (dissoc this :server)))
+    (assoc this :server nil)))
 
 (defn create-system []
   (ParensOfTheDead.))
