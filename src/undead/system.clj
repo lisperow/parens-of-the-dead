@@ -3,11 +3,6 @@
             [org.httpkit.server :refer [run-server]]
             [undead.web :refer [app]]))
 
-(defn app [req]
-  {:status  200
-   :headers {"Content-Type" "text/html"}
-   :body    "hello HTTP!"})
-
 (defn- start-server [handler port]
   (let [server (run-server handler {:port port})]
     (println (str "Started server on localhost:" port))
