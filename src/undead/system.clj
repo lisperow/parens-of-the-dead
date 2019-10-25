@@ -10,7 +10,7 @@
 
 (defn- stop-server [server]
   (when server
-    (server))) ;; run-server returns a fn that stops itself
+    (server)))
 
 (defrecord ParensOfTheDead []
   component/Lifecycle
